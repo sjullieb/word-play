@@ -5,15 +5,16 @@ $(document).ready(function() {
 
     var words = $("#input").val().split(" ");
 
-alert(words.length);
-    var newArray = [];
-    words.forEach(function(word){
+//alert(words.length);
+    var newArray = words.map(function(word){
+
       if (word.length >= 3){
-        newArray.push(word);
+        return word;
       }
+
     });
 
-alert(newArray.length);
+//alert(newArray.length);
     alert(newArray.reverse().join(" "));
     event.preventDefault();
   });
